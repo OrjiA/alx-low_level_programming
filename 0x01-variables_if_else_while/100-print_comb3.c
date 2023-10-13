@@ -1,24 +1,30 @@
 #include <stdio.h>
-/**
- * main - program that prints numbers from 0 to 99.
- * Return: 0
- */
 
+/**
+ * main - Writes 00 - 99
+ * @void: Empty parameter list for main.
+ *
+ * Description: Writes number 00-99
+ *
+ * Return: 0 for success
+*/
 int main(void)
 {
-	int c = 0;
+	int i, j;
 
-	while (c <= 99)
+	for (i = 48; i <= 57; i++)
 	{
-		putchar(c / 10 + '0');
-		putchar(c % 10 + '0');
-		if (c != 99)
+		for (j = 48; j <= 57; j++)
 		{
-			putchar(',');
-			putchar(' ');
+			putchar(i);
+			putchar(j);
+			if (i + j < 114)
+			{
+				putchar(44);
+				putchar(32);
+			}
 		}
-		c++;
 	}
-putchar('\n');
-return (0);
+	putchar(10);
+	return (0);
 }
