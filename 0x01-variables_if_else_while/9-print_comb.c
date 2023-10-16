@@ -1,4 +1,7 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
 /**
  * main - printing numbers from 0-9 with commas and space between them
  * Description: using the main function
@@ -11,8 +14,8 @@ int main(void)
 
 	for (c = 0; c <= 9; c++)
 	{
-		putchar((c % 10) + '0');
-		if (c == 9)
+		putchar(c);
+		if (c != 9)
 		{
 			putchar(',');
 			putchar(' ');
